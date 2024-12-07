@@ -1,11 +1,13 @@
-// Chapter 2 Link JavaScript to HTML
+// Dave Gray's JavaScript tutorial at https://courses.davegray.codes/.
+
+// Chapter 2 Link JavaScript to HTML (7:44)
 
 // console.log("Hello World!");
 // console.log(typeof "Dave");
 // console.log(typeof 42);
 // console.log(typeof true);
 
-// Chapter 3 Strings
+// Chapter 3 Strings (15:17)
 
 // const myVariable = "Mathematics";
 // console.log(myVariable.length);
@@ -22,7 +24,7 @@
 // console.log(myVariable.split(""));
 // console.log("Every good boy does fine".split(" "));
 
-// Chapter 4 Numbers
+// Chapter 4 Numbers (22:14)
 
 // const myNumber = 42;
 // console.log(myNumber);
@@ -58,15 +60,165 @@
 // console.log(Number.isNaN("Dave"));          // false
 // console.log(isNaN("Dave"));                 // true
 
-// Chapter 5 Math Methods
+// Chapter 5 Math Methods (27:55)
 
-console.log(Math.PI);                           // 3.141592653589793
-console.log(Math.trunc(Math.PI));               // 3
-console.log(Math.round(3.5));                   // 4
-console.log(Math.ceil(Math.PI))                 // 4
-console.log(Math.floor(Math.PI))                // 3
-console.log(Math.pow(2, 4))                     // 16
-console.log(Math.min(2, 5, 9))                  // 2
-console.log(Math.max(2, 5, 9))                  // 9
-console.log(Math.random())                      // [0, 1)
-console.log(Math.floor(Math.random() * 10) + 1) //  A random number from 1 .. 10
+// console.log(Math.PI);                           // 3.141592653589793
+// console.log(Math.trunc(Math.PI));               // 3
+// console.log(Math.round(3.5));                   // 4
+// console.log(Math.ceil(Math.PI))                 // 4
+// console.log(Math.floor(Math.PI))                // 3
+// console.log(Math.pow(2, 4))                     // 16
+// console.log(Math.min(2, 5, 9))                  // 2
+// console.log(Math.max(2, 5, 9))                  // 9
+// console.log(Math.random())                      // [0, 1)
+// console.log(Math.floor(Math.random() * 10) + 1) //  A random number from 1 .. 10
+
+// Chapter 6 Code Challenge (32:59)
+
+// // Write code that returns a random letter from a name.
+// const name = "Dave"
+// console.log(name.charAt(Math.floor(Math.random() * name.length)))
+
+// Chapter 7 If Statements (40:07)
+
+// // This code creates a template literal using backticks.
+// let customerIsBanned = false;
+// let soup = "chicken noodle soup";
+// let crackers = true;
+// let reply;
+// if (customerIsBanned) {
+//     reply = "No soup for you!";
+// }
+// else if (soup && crackers) {
+//     reply = `Here's your order of ${soup} and crackers.`;
+// }
+// else if (soup) {
+//     reply = `Here's your order of ${soup}.`;
+// } else {
+//     reply = "Sorry, we're out of soup.";
+// }
+// console.log(reply);
+
+// let testScore = 59;
+// let collegeStudent = true;
+// let grade;
+// if (testScore >= 90) {
+//     grade = "A";
+// }
+// else if (testScore >= 80) {
+//     grade = "B";
+// }
+// else if (testScore >= 70) {
+//     grade = "C";
+// }
+// else if (testScore >= 60) {
+//     grade = "D";
+// } else {
+//     if (collegeStudent) {
+//         grade = "U";
+//     }
+//     else {
+//         grade = "F";
+//     }
+// }
+// console.log(grade);
+
+// // This is an incomplete rock-paper-scissors decision tree.
+// let playerOne = "rock"
+// let computer = "paper"
+// if (playerOne === computer) {
+//     // tie game
+// } else if (playerOne === "rock") {
+//     if (computer === "paper") {
+//         // computer wins
+//     } else {
+//         // playerOne wins because rock beats scissors
+//     }
+// } else if (playerOne === "paper") {
+//     if (computer === "scissors") {
+//         // computer wins
+//     } else {
+//         // playerOne wins because paper beats rock
+//     }
+// } else {
+//     // By elimination, playerOne === "scissors"
+//     if (computer === "rock") {
+//         // computer wins because player is scissors
+//     }
+//     else {
+//         // playerOne wins because scissors beats paper
+//     }
+// }
+
+// Chapter 8 Switch Statements (46:11)
+
+// // A simple switch statement.
+// // Type mismatches (e.g., "2" with 2) cause the default clause to be executed.
+// switch (2) {
+//     case 1:
+//         console.log(1);
+//         break;
+//     case 2:
+//         console.log(2);
+//         break;
+//     case 3:
+//         console.log(3);
+//         break;
+//     default:
+//         console.log("No match");
+// }
+
+// // Generate random numbers from 1 to 5 and match against
+// // 1, 2, or 3.
+// switch (Math.floor(Math.random() * 5) + 1) {
+//     case 1:
+//         console.log(1);
+//         break;
+//     case 2:
+//         console.log(2);
+//         break;
+//     case 3:
+//         console.log(3);
+//         break;
+//     default:
+//         console.log("No match");
+// }
+
+// // Create a decision tree for rock-paper-scissors.
+// // My variation for the default clause checks for an
+// // error in the algorithm where a combination is
+// // not checked correctly.
+// let playerOne = "scissors";
+// let computer = "rock";
+// switch (playerOne) {
+//     case computer:
+//         console.log("Tie game!");
+//         break;
+//     case "rock":
+//         if (computer === "paper") {
+//             console.log("computer wins!");
+//         } else {
+//             console.log("playerOne wins!");
+//         }
+//         break;
+//     case "paper":
+//         if (computer === "scissors") {
+//             console.log("computer wins!");
+//         }
+//         else {
+//             console.log("playerOne wins!");
+//         }
+//         break;
+//     case "scissors":
+//         if (computer == "rock") {
+//             console.log("computer wins!");
+//         } else {
+//             console.log("playerOne wins!");
+//         }
+//         break;
+//     default:
+//         console.log("Algorithm error!");
+// }
+
+// Chapter 9 Ternary Operator (49:40)
+
