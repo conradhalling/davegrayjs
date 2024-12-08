@@ -254,3 +254,30 @@
 // console.log(result);
 
 // Chapter 10 User Input (54:39)
+
+// // alert()
+// alert("Hello World!");
+
+// // confirm()
+// result = confirm("OK === true\nCancel === false");
+// console.log(result);
+
+// // prompt()
+// // If the user clicks Cancel, prompt returns null.
+// // ?? is the nullish coalescing operator.
+// let name = prompt("Please enter your name.");
+// console.log(name ?? "You didn't enter your name.");
+
+// // If the user clicks OK without entering any data,
+// // prompt returns "", the empty string.
+// // Both null and "" are falsy.
+// // Another try at checking whether a name was entered.
+// let name2 = prompt("Please enter your name.");
+// trimmedName = name2.trim();
+// if (trimmedName) {
+//   console.log(trimmedName);
+// } else {
+//   console.log("You didn't enter your name.");
+// }
+
+// Chapter 11 Your First Game (1:04:38)
