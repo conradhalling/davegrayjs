@@ -1,12 +1,14 @@
 // Dave Gray's JavaScript tutorial at https://courses.davegray.codes/.
 // Uncomment code to execute it.
 
+
 // Chapter 2 Link JavaScript to HTML (7:44)
 
 // console.log("Hello World!");
 // console.log(typeof "Dave");
 // console.log(typeof 42);
 // console.log(typeof true);
+
 
 // Chapter 3 Strings (15:17)
 
@@ -24,6 +26,7 @@
 // console.log(myVariable.split("e"));
 // console.log(myVariable.split(""));
 // console.log("Every good boy does fine".split(" "));
+
 
 // Chapter 4 Numbers (22:14)
 
@@ -61,6 +64,7 @@
 // console.log(Number.isNaN("Dave"));          // false
 // console.log(isNaN("Dave"));                 // true
 
+
 // Chapter 5 Math Methods (27:55)
 
 // console.log(Math.PI);                           // 3.141592653589793
@@ -74,11 +78,13 @@
 // console.log(Math.random())                      // [0, 1)
 // console.log(Math.floor(Math.random() * 10) + 1) //  A random number from 1 .. 10
 
+
 // Chapter 6 Code Challenge (32:59)
 
 // // Write code that returns a random letter from a name.
 // const name = "Dave"
 // console.log(name.charAt(Math.floor(Math.random() * name.length)))
+
 
 // Chapter 7 If Statements (40:07)
 
@@ -151,6 +157,7 @@
 //     }
 // }
 
+
 // Chapter 8 Switch Statements (46:11)
 
 // // A simple switch statement.
@@ -221,6 +228,7 @@
 //         console.log("Algorithm error!");
 // }
 
+
 // Chapter 9 Ternary Operator (49:40)
 
 // let soup = "Chicken Noodle Soup";
@@ -254,6 +262,7 @@
 //           ? "Computer wins!" : "PlayerOne wins!";
 // console.log(result);
 
+
 // Chapter 10 User Input (54:39)
 
 // // alert()
@@ -280,6 +289,7 @@
 // } else {
 //   console.log("You didn't enter your name.");
 // }
+
 
 // Chapter 11 Your First Game (1:04:38)
 
@@ -353,6 +363,7 @@
 //   }
 // }
 
+
 // Chapter 12 Loops (1:20:26)
 
 // // while loops
@@ -412,6 +423,7 @@
 //   counter += 1;
 // }
 
+
 // Chapter 13 Functions (1:36:20)
 
 // // Create and call a simple function.
@@ -445,6 +457,7 @@
 // console.log(toProperCase("dAvE"));
 // console.log(toProperCase("september"));
 
+
 // Chapter 14 Scope (1:48:10)
 
 // var x = 1;
@@ -474,6 +487,7 @@
 // console.log(`global: ${x}`);
 // console.log(`global: ${y}`);
 // console.log(`global: ${z}`);
+
 
 // Chapter 15 Arrays (2:05:29)
 
@@ -584,9 +598,113 @@
 // console.log(store[0][0][1]);
 // console.log(store[1][1][0]);
 
+
 // Chapter 16 Refactor the Game (2:33:48)
 // Use loops, functions, and arrays to refactor the rock-paper-scissors game.
 // See rps1.html and rps1.js.
 
 
 // Chapter 17 Objects (2:51:53)
+// See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects.
+// Objects are the equivalent of Python dictionaries.
+
+// // Create objects.
+// const myObj = { name: "Dave" };
+// console.log(myObj);
+// console.log(myObj.name);
+
+// const anotherObj = {
+//   alive: true,
+//   answer: 42,
+//   hobbies: ["Eat", "Sleep", "Code"],
+//   beverage: {
+//     morning: "coffee",
+//     afternoon: "iced tea",
+//   },
+//   action: function () {
+//     return "Hello world!";
+//   },
+//   action2: function () {
+//     return `Time for ${this.beverage.morning}.`;
+//   }
+// };
+// console.log(anotherObj.hobbies);
+// console.log(anotherObj["hobbies"]);
+// console.log(anotherObj.hobbies[0]);
+// console.log(anotherObj["beverage"]["morning"]);
+// // Return the method.
+// console.log(anotherObj.action);
+// // Return the output of the method.
+// console.log(anotherObj.action());
+// console.log(anotherObj.action2());
+
+// // Use inheritance.
+// const vehicle = {
+//   wheels: 4,
+//   engine: function () {
+//     return "Vrroooom!";
+//   }
+// };
+// const truck = Object.create(vehicle);
+// truck.doors = 2; // New property on truck only.
+// console.log(truck);
+// console.log(truck.wheels);
+// console.log(truck.engine());
+// const car = Object.create(vehicle);
+// car.doors = 4;
+// car.engine = function () { return "Whooosh!"; };
+// console.log(car.engine());
+// console.log(car.wheels); // value inherited from vehicle object
+// const tesla = Object.create(car);
+// console.log(tesla.wheels);
+// console.log(tesla.engine());
+// tesla.engine = function () { return "Shhhhh..."; };
+// console.log(tesla.engine());
+
+// // Access keys and values of an object.
+// const band = {
+//   vocals: "Robert Plant",
+//   guitar: "Jimmy Page",
+//   base: "John Paul Jones",
+//   drums: "John Bonham"
+// };
+// console.log(Object.keys(band));
+// console.log(Object.values(band));
+
+// // Iterate through keys (properties):
+// // This is the most idomatic way to loop through the properties.
+// for (const job in band) {
+//   console.log(`On ${job}, it's ${band[job]}!`);
+// }
+// // Loop through the properties using a for .. in loop, which is awkward.
+// properties = Object.keys(band);
+// for (const index in properties) {
+//   console.log(`On ${properties[index]}, it's ${band[properties[index]]}!`);
+// }
+// // Loop through the properties using a for .. of loop.
+// for (const job of Object.keys(band)) {
+//   console.log(`On ${job}, it's ${band[job]}!`);
+// }
+
+// // Delete a property.
+// delete band.drums;
+// console.log(band.hasOwnProperty("drums"));
+
+// // Destructure an object.
+// // See also https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Destructuring_assignment.
+// const { guitar: myGuitar, base: myBass } = band;
+// console.log(myGuitar);
+// console.log(myBass);
+// // Use the key names to name the variables.
+// const { vocals, guitar, base } = band;
+// console.log(vocals);
+
+// // Experiment with destructuring an array.
+// const trees = ["elm", "oak", "maple", "fir"];
+// console.log(trees);
+// const [elm, oak, maple, fir] = trees;
+// console.log(elm, oak, maple, fir);
+
+// // This is tricky! Destructure an object in a function.
+// function sings({ vocals }) { return `${vocals} sings!`; }
+// console.log(sings(band));
