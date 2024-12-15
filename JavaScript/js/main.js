@@ -708,3 +708,131 @@
 // // This is tricky! Destructure an object in a function.
 // function sings({ vocals }) { return `${vocals} sings!`; }
 // console.log(sings(band));
+
+
+// Chapter 18 Classes
+
+// Declare a class with properties and a method.
+// This create a new type.
+class Pizza {
+  constructor(type, size) {
+    this.type = type;
+    this.size = size;
+    this.crust = "original";
+  }
+  bake() {
+    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+  }
+}
+
+// Create an instance of class Pizza and use it.
+const myPizza = new Pizza("pepperoni", "small");
+myPizza.bake();
+console.log(myPizza);
+console.log(typeof myPizza); // object
+
+// Modify the instance directly using dot notation.
+myPizza.type = "supreme";
+myPizza.bake();
+
+// A class with get and set methods.
+// The arguments can be validated using this approach.
+// Use a leading underscore to indicate that the property
+// is private.
+// I think I prefer this way.
+class Pizza2 {
+  constructor(type, size) {
+    this.type = type;
+    this.size = size;
+    this._crust = "original";
+  }
+  get crust() {
+    return this._crust;
+  }
+  set crust(crust) {
+    // Validate the input crust value here.
+    this._crust = crust;
+  }
+  bake() {
+    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+  }
+}
+
+const myPizza2 = new Pizza2("Hawaiian", "medium");
+myPizza2.bake();
+myPizza2.crust = "thin"; // uses the setter method
+myPizza2.bake();
+console.log(myPizza2.crust);
+
+// A class with specific methods for getting and setting.
+// The arguments can be validated using this appropach.
+class Pizza3 {
+  constructor(type, size) {
+    this.type = type;
+    this.size = size;
+    this.crust = "original";
+  }
+  getCrust() {
+    return this.crust;
+  }
+  setCrust(crust) {
+    // Validate the input crust value here.
+    this.crust = crust;
+  }
+  bake() {
+    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+  }
+}
+
+const myPizza3 = new Pizza3("sausage", "large");
+myPizza3.bake();
+myPizza3.setCrust("thick");
+myPizza3.bake();
+console.log(myPizza3.getCrust());
+
+// Extra.
+// A class with truly protected properties.
+// This is a recent addition to the language.
+// I might like this best of all since this approach is simple.
+class Pizza4 {
+  #type;
+  #size;
+  #crust;
+
+  constructor(type, size, crust) {
+    // This constructor uses the set method for each property.
+    this.type = type;
+    this.size = size;
+    this.crust = crust;
+  }
+  get crust() {
+    return this.#crust;
+  }
+  set crust(crust) {
+    // Validate the input crust value here.
+    this.#crust = crust;
+  }
+  get size() {
+    return this.#size;
+  }
+  set size(size) {
+    // Validate the input size value here.
+    this.#size = size;
+  }
+  get type() {
+    return this.#type;
+  }
+  set type(type) {
+    // Validate the input type value here.
+    this.#type = type;
+  }
+  bake() {
+    // This method uses the get method for each property.
+    console.log(`Baking a ${this.size} ${this.type} ${this.crust} crust pizza.`);
+  }
+}
+
+const myPizza4 = new Pizza4("spinach", "giant", "rosemary");
+myPizza4.bake();
+myPizza4.crust = "thick";
+myPizza4.bake();
