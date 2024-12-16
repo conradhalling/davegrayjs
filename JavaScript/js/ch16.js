@@ -1,4 +1,8 @@
+"use strict";
+// Dave Gray's JavaScript tutorial at https://courses.davegray.codes/.
+// Chapter 16 Refactor the Game (2:33:48)
 // A simple interactive game of rock, paper, or scissors.
+
 playGame();
 
 /**
