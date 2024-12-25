@@ -21,9 +21,17 @@ main {
 }
 
 h1 {
-  font-size: 250%;
+  font-size: 200%;
 }
 
 a {
-  color: #ff88ff;
+    color:  aliceblue;
+}
+
+a:visited {
+    color:  lightgray;
+}
+
+a:hover, a:active {
+    color:  #eee;
 }
