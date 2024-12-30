@@ -1,0 +1,44 @@
+/* Universal selector, or CSS reset. */
+/*
+* {
+    font-family: monospace;
+}
+*/
+
+/* Element selectors */
+body {
+    font-size: 22px;
+}
+
+h1, h2 {
+    color: blue;
+}
+
+p {
+    color: purple;
+}
+
+/*
+    It is better to use a class selector.
+*/
+/*
+p span {
+    text-transform: uppercase;
+    background-color: gold;
+}
+*/
+
+.highlight {
+    text-transform: uppercase;
+    background-color: gold;
+}
+
+/* Class selector */
+.gray {
+    color: gray;
+}
+
+/* ID selector */
+#second {
+    font-style: italic;
+}
