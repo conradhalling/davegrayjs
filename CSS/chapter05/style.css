@@ -1,0 +1,62 @@
+/* This file contains experimental CSS settings. */
+
+html {
+    /* font-size: 1em; */
+    /* font-size: 20px; */
+}
+
+body {
+    /* border: 1rem solid green; */
+}
+
+header {
+    width: 50%;
+}
+
+h1 {
+    /* 1em = 32px */
+    /* 1rem = 16px */
+    border: 1px solid red;
+    /* padding: 1rem; */
+    width: 50%;
+}
+
+h2 {
+    /* 1em = 24px */
+    /* 1rem = 16px */
+    /* border: 1rem solid orange; */
+    /* padding: 1rem; */
+}
+
+p {
+    /* font-size: 16px; */
+    /* font-size: 32px; */
+    /* border: 1rem solid blue; */
+    /* padding: 1rem; */
+    font-size: 2rem;
+}
+
+.container {
+    border: dashed red;
+    border-top-width: 3px;
+    border-top-style: ridge;
+    border-top-color: blue;
+    border-right: 10px dotted blue;
+    font-size: 1.5rem;
+    margin: 1.5em;
+    padding: 1.5em;
+    outline: 5px solid purple;
+    outline-offset: 5px;
+}
+
+.circle {
+    margin: 3rem auto;
+    background-color: gold;
+    width: 100px;
+    height: 100px;
+    border: 2px solid black;
+    border-radius: 50px;
+    outline: 2px solid red;
+    outline-offset: 0.25rem;
+    
+}
