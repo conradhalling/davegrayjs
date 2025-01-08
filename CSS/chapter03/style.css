@@ -8,9 +8,23 @@ body {
 
 p {
     /* many ways to specify colors */
-    color: black;
+    /* play with the VS Code color picker */
     color: rgb(0,0,0);
-    color: rgba(0,0,0,0.5);
+    color: hsl(0, 54%, 35%);
     color: #000000;
     color: #000;
+    color: gold;
+    color: hsl(247, 46%, 37%);
+}
+
+.one {
+    color: darkred;
+}
+
+.two {
+    color: darkgreen;
+}
+
+.three {
+    color: darkslategray;
 }
