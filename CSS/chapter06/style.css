@@ -1,0 +1,68 @@
+/*
+  Typography is the way that text is arranged and presented.
+
+  An input element and a button element do not inherit font
+  size from the parent element unless you add a font: inherit
+  style.
+*/
+
+/* Import a Google font. */
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.roboto-regular {
+  font-family: "Roboto", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  /* font-family: 'Times New Roman', Times, serif */
+  /* font-family: serif; */
+  /* font-family: fantasy; */
+  /* font-family: sans-serif; */
+  /* font-family: 'Courier New', Courier, monospace; */
+  /* font-family: Palatino; */
+  font-family: Roboto, sans-serif;
+}
+
+/* input, button {
+  font: inherit;
+} */
+
+p {
+  /* text-decoration: underline; */
+  /* text-decoration: overline; */
+  /* text-decoration: line-through; */
+  /* text-decoration: line-through underline overline; */
+
+  /* text-transform: capitalize; */
+  /* text-transform: lowercase; */
+  /* text-transform: uppercase; */
+  /* text-transform: none; */
+
+  /* text-align: center; */
+  /* text-align: justify; */
+  /* text-align: end; */
+  /* text-align: start; */
+  /* text-align: left; */
+  /* text-align: right; */
+
+  /* text-indent: 3ch; */
+
+  line-height: 1.5;
+  /* letter-spacing: 0.1em; */
+  /* word-spacing: 0.1em; */
+
+  /* font-weight: 400; */
+  /* font-weight: normal; */
+  /* font-weight: lighter; */
+  /* font-weight: bold; */
+  /* font-weight: bolder; */
+  /* font-weight: lighter; */
+
+  /* font-style: oblique; */
+  /* font-style: italic; */
+  /* font-style: normal; */
+}
