@@ -1,0 +1,52 @@
+/*
+  -   The default color for an unvisited link is rgb(0, 0, 238). 
+  -   The default color for a visited link is rgb(85, 26, 139).
+  -   Styling the color for a overrides the colors for a:hover, a:visited, and
+      a:active.
+  -   a:visited has more specificity than a. See the Specificity Calculator.
+  -   For specificity, see https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity.
+  -   LVHA-order: :link — :visited — :hover — :active
+  -   a:focus is important when the user is tabbing through the page
+  -   Find similar colors using hsl(). Dave changes the h (hue) value.
+      I like changing the l (luminance) value to make the color darker.
+  -   Another way to indicate a:hover is to reduce the opacity, which
+      lightens the color when the background is white.
+  -   It might be safer to change the color than to change the opacity
+      since the background color affects the opacity.
+  -   To be really obvious for hover, change the background-color.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  padding: 10%;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+a {
+  text-decoration: underline;
+  /* text-decoration: none; */
+
+  cursor: pointer;
+  /* cursor: not-allowed; */
+
+  /* color: rgb(0, 0, 238); */
+  /* color: black; */
+  color: hsl(207, 44%, 49%);
+}
+
+a:visited {
+  color: rgb(85, 26, 139);
+}
+
+a:hover, a.focus {
+  /* color: hsl(207, 44%, 20%); */
+  /* opacity: 0.8; */
+  color: hsl(207, 44%, 49%, 0.8);
+  background-color: gold;
+}
+
+a:active {
+  color: red;
+}
