@@ -1,0 +1,65 @@
+/*
+  - The display property determines whether an element is diplayed as an inline
+    element or as a block. There are other display types to be demonstrated
+    later.
+  - Block-level elements have 100% width and stack on one another.
+  - Inline elements don't stack. They don't have margins or height, but they do
+    have width and padding, although too much padding causes the element to
+    overlap other elements.
+  - Setting the display to inline-block, as demonstrated, preserves a
+    combination of inline and block display characteristics.
+  - The inline-block property can be used to turn a link into a button. It can
+    also be used to turn a list into a row (instead of a column), as
+    demonstrated here.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rotobo&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+    font-size: 2rem;
+    font-family: Roboto, sans-serif;
+}
+
+p {
+  background-color: lightgray;
+}
+
+.opposite {
+  display: inline-block;
+  background-color: #333;
+  color: whitesmoke;
+  margin-top: 100px;
+  height: 200px;
+  padding: 4rem;
+  width: 600px;
+}
+
+ul {
+  /* display: none; */
+  list-style-type: none;
+  padding: 0.5rem;
+  text-align: right;
+  background-color: black;
+  margin: 0;
+}
+
+li {
+  display: inline-block;
+  /* display: none; */
+  margin-inline: 0.5rem;
+}
+
+li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+li a:hover, li a:focus {
+  text-decoration: underline;
+}
