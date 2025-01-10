@@ -1,0 +1,74 @@
+/*
+- There is default padding for li under ul and ol to indent the li elements.
+  Turn it off with padding: 0;
+- I don't think I would ever want to center list items.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+body {
+  padding: 5% 10%;
+  font-size: 2rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+ol {
+  list-style-type: decimal;
+  /* list-style-type: decimal-leading-zero; */
+  /* list-style-type: lower-alpha; */
+  /* list-style-type: lower-roman; */
+  /* list-style-type: none; */
+  /* list-style-type: upper-alpha; */
+  /* list-style-type: upper-roman; */
+}
+
+ul {
+  /* list-style-type: circle; */
+  /* list-style-type: disc; */
+  list-style-type: square;
+  /* list-style-type: none; */
+
+  /* text-align: center; */
+  /* list-style-position: inside; */
+  /* list-style-position: outside; */
+  color: blue;
+  /* line-height: 1.6em; */
+  /* list-style-image: url("images/checkmark.png"); */
+}
+
+li {
+  color: red;
+}
+
+ul li {
+  color: green;
+}
+
+ul li:nth-child(2) {
+  color: purple;
+}
+
+/* ul li:nth-child(odd) {
+  color: purple;
+} */
+
+/* ul li:nth-child(even) {
+  color: purple;
+} */
+
+/* Style the markers of li elements. */
+/* ::marker {
+  color: red;
+  font-family: fantasy;
+  font-size: 1.5em;
+  content: "Only $5 >>";
+} */
+
+/* Style specific markers. */
+/* no space between li and ::marker. */
+ul li:nth-child(2)::marker {
+  color: orange;
+  font-family: fantasy;
+  font-size: 1.5em;
+  content: "$8 >>";
+}
