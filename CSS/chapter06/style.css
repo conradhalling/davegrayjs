@@ -1,9 +1,7 @@
 /*
-  Typography is the way that text is arranged and presented.
-
-  An input element and a button element do not inherit font
-  size from the parent element unless you add a font: inherit
-  style.
+  - Typography is the way that text is arranged and presented.
+  - An input element and a button element do not inherit font size from the
+    parent element unless you add a font: inherit style.
 */
 
 /* Import a Google font. */

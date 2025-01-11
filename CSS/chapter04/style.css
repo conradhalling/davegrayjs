@@ -1,63 +1,75 @@
-/* This file contains experimental CSS settings. */
+/*
+  - The em unit is calculated from the font size in the element. A default h1
+    element has a font size of 2 em or 32px. If you use an em value for the
+    border, 1em for the border becomes 32px.
+  - A default h2 element has a font size of 1.5em or 24px, and a border of 1em
+    has a width of 24px. This holds true for padding and margins, too, if em
+    units are specified.
+  - This variation in size can be overcome by using rem units. These are em
+    units relative to the root element (the html element). When rem units are
+    used, borders and margins of 1rem are all 16 pixels wide.
+  - In Chrome, Settings > Appearance > Font size > Large increases the font size
+    by 1.5. 1rem becomes 24px.
+*/
 
 /* CSS reset */
 /* The other option for box-sizing is content-box. */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    /* font-size: 1em; */
-    /* font-size: 20px; */
+  /* font-size: 1em; */
+  /* font-size: 20px; */
 }
 
 body {
-    /* 
-        -   Turn on scrollbars.
-        -   Add enough content that it flows off the bottom of the page.
-        -   Set width to 100vw. This causes creation of a horizontal scrollbar.
-        -   Set width to 100%. This does not cause creation of a horizontal
-            scrollbar.
-    */
-    /* width: 100vw; */
-    width: 100%;
-    /*
-        -   Toggle the min-height value to move the border to the bottom.
-        -   Note that the background-color includes the entire page no matter
-            what.
-    */
-    min-height: 100vh;
-    background-color: skyblue;
-    border: 1rem solid green;
+  /* 
+    -   Turn on scrollbars.
+    -   Add enough content that it flows off the bottom of the page.
+    -   Set width to 100vw. This causes creation of a horizontal scrollbar.
+    -   Set width to 100%. This does not cause creation of a horizontal
+        scrollbar.
+  */
+  /* width: 100vw; */
+  width: 100%;
+  /*
+    -   Toggle the min-height value to move the border to the bottom.
+    -   Note that the background-color includes the entire page no matter
+        what.
+  */
+  min-height: 100vh;
+  background-color: skyblue;
+  border: 1rem solid green;
 }
 
 header {
-    /* width: 50%; */
+  /* width: 50%; */
 }
 
 main {
-    width: 50vw;
-    /* background-color: skyblue; */
-    font-size: 2rem;
+  width: 50vw;
+  /* background-color: skyblue; */
+  font-size: 2rem;
 }
 
 h1 {
-    /* 1em = 32px */
-    /* 1rem = 16px */
-    border: 1px solid red;
-    padding: 0.5rem;
-    width: 50%;
-    font-size: 3rem;
+  /* 1em = 32px */
+  /* 1rem = 16px */
+  border: 1px solid red;
+  padding: 0.5rem;
+  width: 50%;
+  font-size: 3rem;
 }
 
 p {
-    /* font-size: 16px; */
-    /* font-size: 32px; */
-    /* font-size: 1em; */
-    /* border: 1rem solid blue; */
-    /* padding: 1rem; */
-    font-size: 2rem;
-    width: 40ch;
+  /* font-size: 16px; */
+  /* font-size: 32px; */
+  /* font-size: 1em; */
+  /* border: 1rem solid blue; */
+  /* padding: 1rem; */
+  font-size: 2rem;
+  width: 40ch;
 }
