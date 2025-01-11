@@ -1,0 +1,58 @@
+/*
+  - The .block class uses vw units to make it possible to create a floating
+    black square.
+  - Adding the float style to the div element takes it out of the standard page
+    flow, where as a block it is stacked on top of the next p element.
+  - The values for float are left, right, and none (no center).
+  - Adding a left margin to the p elements doesn't separate them from the
+    floating div because the floating div isn't in the standard page flow. You
+    have to apply the margin to the floating div.
+  - Enter div.block.right to speedily enter <div class="block right"></div>.
+  - Dave demonstrates the old way of clearing using a div with a clear: both
+    style. This appears in old code.
+  - After demonstrating how to float divs, Dave moves on to put the div and the
+    first p into a container such as <article> or <section>. This shows some
+    additional surprises, where the float box extends beyond the bottom of the
+    container. This can be fixed by adding an overflow: auto style to the
+    container, but this is legacy code. The modern way to fix the problem is
+    to apply display: flow-root.
+  - The float style was once used for creating columns, but this is no
+    longer ncessary.
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rotobo&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+}
+
+.block {
+  width: 30vw;
+  height: 30vw;
+  background-color: black;
+  color: white;
+  padding: 1rem;
+}
+
+.left {
+  float: left;
+  margin-right: 1rem;
+}
+
+.right {
+  float: right;
+  margin-left: 1rem;
+}
+
+.clear {
+  clear: both;
+}
+
+section {
+  background-color: bisque;
+  border: 1px solid black;
+  padding: 1rem;
+  /* overflow: auto; */
+  display: flow-root;
+}
