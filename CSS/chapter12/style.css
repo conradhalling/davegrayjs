@@ -1,0 +1,65 @@
+/*
+  - It is not necessarily one paragraph per column.
+  - Resize the width of the page to see CSS adapt the column count to support
+    the column width of 250px.
+  - Set margin-top: 0 for the paragraphs in the columns to prevent the first
+    paragraph from being pushed down in the column by its top margin. The
+    margin-bottom setting will still separate the paragraphs.
+  - Can set margin-bottom to 0 and text-indent to, say, 2rem, to get a more
+    normal text layout in the columns.
+  - text-align: justify makes a mess of the columns because the words are
+    long and the columns are narrow.
+  - The break-inside: avoid style is intended to keep the Next Topic header
+    contained entirely in one column (rather than starting in one column and
+    ending in the next column.
+  - Add break-before: column to keep the Next Topic header from appearing at
+    the bottom of a column. However, this forces at least two columns.
+    In Chrome, if the columns get too narrow, the Next Topic header and the
+    following paragraph just disappear! That is buggy.
+  - https://unicode-table.com is a place to look up Unicode characters. This
+    website is now symbl.cc. (This site is loaded with ads.)
+*/
+
+@import url("https://fonts.googleapis.com/css2?family=Rotobo&display=swap");
+
+body {
+  font-size: 1.5rem;
+  font-family: Roboto, sans-serif;
+}
+
+.columns {
+  /* column-count: 4;
+  column-width: 15rem; */
+  columns: 4 15rem;
+  column-rule: 1px solid #333;
+  column-gap: 3rem;
+}
+
+.columns p {
+  margin-top: 0;
+  margin-bottom: 0;
+  text-indent: 2rem;
+  /* text-align: justify; */
+}
+
+.columns h2 {
+  margin-top: 0;
+  background-color: #333;
+  color: #fff;
+  padding: 1rem;
+  break-inside: avoid;
+  break-before: column;
+}
+
+.columns .quote {
+  font-size: 3rem;
+  text-align: center;
+  color: #333;
+  column-span: all;
+  margin: 2rem;
+}
+
+.nowrap {
+  white-space: nowrap;
+  /* text-wrap-mode: nowrap; */
+}
